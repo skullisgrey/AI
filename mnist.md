@@ -57,7 +57,7 @@ print(X.shape, YT.shape, x.shape, yt.shape)
 
 (50000, 32, 32, 3) (50000, 1) (10000, 32, 32, 3) (10000, 1)
 
-X, x의 데이터 수는 50000, shape는 32x32x3, YT, yt의 데이터 수는 10000
+X, YT의 데이터 수는 50000, shape는 32x32x3, x, yt의 데이터 수는 10000, shape는 32x32x3
 
 ## 예제
 
