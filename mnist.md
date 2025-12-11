@@ -26,6 +26,39 @@ X와 x는 전부 28x28픽셀로 구성된 그림이고, 1픽셀의 크기는 8�
 
 mnist 말고, fashion_mnist, cifar 등 사용 가능. 단, shape가 달라짐에 유의.
 
+## shape 확인법
+
+```
+import tensorflow as tf
+
+mnist = tf.keras.datasets.mnist
+
+(X, YT), (x, yt) = mnist.load_data()
+
+print(X.shape, YT.shape, x.shape, yt.shape)
+
+```
+
+이를 실행하면 다음과 같은 결과가 나온다.
+
+(60000, 28, 28) (60000,) (10000, 28, 28) (10000,) 
+
+(X의 데이터 수, shape) ,(YT의 데이터 수), (x의 데이터 수, shape), (yt의 데이터 수) // 여기서 shape는 28x28
+
+```
+import tensorflow as tf
+
+mnist = tf.keras.datasets.cifar10
+
+(X, YT), (x, yt) = mnist.load_data()
+
+print(X.shape, YT.shape, x.shape, yt.shape)
+```
+
+(50000, 32, 32, 3) (50000, 1) (10000, 32, 32, 3) (10000, 1)
+
+X, x의 데이터 수는 50000, shape는 32x32x3, YT, yt의 데이터 수는 10000
+
 ## 예제
 
 ```
